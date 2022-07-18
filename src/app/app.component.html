@@ -1,29 +1,50 @@
 <div class="container2">
   <span class="span1"
-    ><input type="text" pInputText readonly class="input" /> Netto</span
+    ><input type="text" pInputText readonly class="input" [(ngModel)]="netto" />
+    Netto</span
   >
   <span class="span1"
-    ><input type="text" pInputText readonly /> Belegnummer</span
+    ><input type="text" pInputText readonly [(ngModel)]="belegnummer" />
+    Belegnummer</span
   >
 </div>
 <br />
 <div class="container2">
   <span class="span1"
-    ><input type="text" pInputText readonly class="input" />MwSt. 19%</span
+    ><input
+      type="text"
+      pInputText
+      readonly
+      class="input"
+      [(ngModel)]="mwst"
+    />MwSt. 19%</span
   >
   <span></span>
 </div>
 <br />
 <div class="container2">
   <span class="span1"
-    ><input type="text" pInputText readonly class="input" />Brutto</span
+    ><input
+      id="brutto"
+      type="text"
+      pInputText
+      readonly
+      class="input"
+      [(ngModel)]="brutto"
+    />Brutto</span
   >
   <span></span>
 </div>
 <br />
 <div class="container2">
   <span class="span1"
-    ><input type="text" pInputText readonly class="input"
+    ><input
+      id="german"
+      type="text"
+      pInputText
+      readonly
+      class="input"
+      [(ngModel)]="read"
   /></span>
   <span></span>
 </div>
@@ -36,14 +57,14 @@
       placeholder="Select a massage"
       optionLabel="name"
       [showClear]="true"
+      onblur="test()"
     ></p-dropdown>
   </span>
   <span>
     <p-dropdown
-      [options]="massageType"
+      [options]="time"
       [(ngModel)]="selectedTime"
       placeholder="Select a time"
-      optionLabel="time"
       [showClear]="true"
     ></p-dropdown>
   </span>
