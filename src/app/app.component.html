@@ -1,0 +1,34 @@
+<h5>Single</h5>
+<p-dropdown [options]="cities" [(ngModel)]="selectedCity1" placeholder="Select a City" optionLabel="name"
+	[showClear]="true"></p-dropdown>
+
+<h5>Editable</h5>
+<p-dropdown [options]="cities" [(ngModel)]="selectedCity2" editable="true" optionLabel="name"></p-dropdown>
+
+<h5>Advanced with Templating, Filtering and Clear Icon</h5>
+<p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [filter]="true" filterBy="name"
+	[showClear]="true" placeholder="Select a Country">
+	<ng-template pTemplate="selectedItem">
+		<div class="country-item country-item-value" *ngIf="selectedCountry">
+			<div>{{selectedCountry.name}}</div>
+		</div>
+	</ng-template>
+	<ng-template let-country pTemplate="item">
+		<div class="country-item">
+			<div>{{country.name}}</div>
+		</div>
+	</ng-template>
+</p-dropdown>
+
+<h5>Group</h5>
+<p-dropdown [options]="groupedCities" [(ngModel)]="selectedCity3" placeholder="Select a City" [group]="true">
+	<ng-template let-group pTemplate="group">
+		<div class="p-d-flex p-ai-center">
+			<span>{{group.label}}</span>
+		</div>
+	</ng-template>
+</p-dropdown>
+
+<h5>Virtual Scroll (10000 Items)</h5>
+<p-dropdown [options]="items" [(ngModel)]="item" placeholder="Select Item" [virtualScroll]="true" [itemSize]="31"
+	[filter]="false"></p-dropdown>
