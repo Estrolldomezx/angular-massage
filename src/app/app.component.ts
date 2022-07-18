@@ -153,7 +153,8 @@ export class AppComponent {
   }
 
   makePdf() {
-    // var doc = new jsPDF();
+    // const doc = new jsPDF();
+    // var doc = new jsPDF(); // worker_threads
     // doc.text('Hello world!', 10, 10);
     // doc.save('a4.pdf');
   }
