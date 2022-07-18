@@ -1,34 +1,128 @@
-<h5>Single</h5>
-<p-dropdown [options]="cities" [(ngModel)]="selectedCity1" placeholder="Select a City" optionLabel="name"
-	[showClear]="true"></p-dropdown>
-
-<h5>Editable</h5>
-<p-dropdown [options]="cities" [(ngModel)]="selectedCity2" editable="true" optionLabel="name"></p-dropdown>
-
-<h5>Advanced with Templating, Filtering and Clear Icon</h5>
-<p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [filter]="true" filterBy="name"
-	[showClear]="true" placeholder="Select a Country">
-	<ng-template pTemplate="selectedItem">
-		<div class="country-item country-item-value" *ngIf="selectedCountry">
-			<div>{{selectedCountry.name}}</div>
-		</div>
-	</ng-template>
-	<ng-template let-country pTemplate="item">
-		<div class="country-item">
-			<div>{{country.name}}</div>
-		</div>
-	</ng-template>
-</p-dropdown>
-
-<h5>Group</h5>
-<p-dropdown [options]="groupedCities" [(ngModel)]="selectedCity3" placeholder="Select a City" [group]="true">
-	<ng-template let-group pTemplate="group">
-		<div class="p-d-flex p-ai-center">
-			<span>{{group.label}}</span>
-		</div>
-	</ng-template>
-</p-dropdown>
-
-<h5>Virtual Scroll (10000 Items)</h5>
-<p-dropdown [options]="items" [(ngModel)]="item" placeholder="Select Item" [virtualScroll]="true" [itemSize]="31"
-	[filter]="false"></p-dropdown>
+<div class="container2">
+  <span class="span1"
+    ><input type="text" pInputText readonly class="input" /> Netto</span
+  >
+  <span class="span1"
+    ><input type="text" pInputText readonly /> Belegnummer</span
+  >
+</div>
+<br />
+<div class="container2">
+  <span class="span1"
+    ><input type="text" pInputText readonly class="input" />MwSt. 19%</span
+  >
+  <span></span>
+</div>
+<br />
+<div class="container2">
+  <span class="span1"
+    ><input type="text" pInputText readonly class="input" />Brutto</span
+  >
+  <span></span>
+</div>
+<br />
+<div class="container2">
+  <span class="span1"
+    ><input type="text" pInputText readonly class="input"
+  /></span>
+  <span></span>
+</div>
+<br />
+<div class="container">
+  <span class="span">
+    <p-dropdown
+      [options]="massageType"
+      [(ngModel)]="selectedMassage"
+      placeholder="Select a massage"
+      optionLabel="name"
+      [showClear]="true"
+    ></p-dropdown>
+  </span>
+  <span>
+    <p-dropdown
+      [options]="massageType"
+      [(ngModel)]="selectedTime"
+      placeholder="Select a time"
+      optionLabel="time"
+      [showClear]="true"
+    ></p-dropdown>
+  </span>
+</div>
+<br />
+<div class="container">
+  <span class="span">
+    <p-dropdown
+      [options]="person"
+      [(ngModel)]="selectedPerson"
+      placeholder="Select a person"
+      [showClear]="true"
+    ></p-dropdown>
+  </span>
+  <span>
+    <p-dropdown
+      [options]="count"
+      [(ngModel)]="selectedCount"
+      placeholder="Select count"
+      [showClear]="true"
+    ></p-dropdown>
+  </span>
+</div>
+<br />
+<div class="container">
+  <span class="span">
+    <p-dropdown
+      [options]="cities"
+      [(ngModel)]="selectedCity"
+      placeholder="Select a city"
+      optionLabel="name"
+      [showClear]="true"
+    ></p-dropdown>
+  </span>
+  <span>
+    <p-calendar
+      inputId="basic"
+      [(ngModel)]="date"
+      showButtonBar="true"
+      [showIcon]="true"
+    ></p-calendar
+  ></span>
+</div>
+<br />
+<div class="container">
+  <span class="span3">
+    <button
+      pButton
+      pRipple
+      type="button"
+      label="SAVE INPUT"
+      class="p-button-raised p-button-info"
+    ></button>
+  </span>
+  <span class="span3">
+    <button
+      pButton
+      pRipple
+      type="button"
+      label="NEXT-INPUT"
+      class="p-button-raised p-button-help"
+    ></button>
+  </span>
+  <span class="span3">
+    <button
+      pButton
+      pRipple
+      type="button"
+      label="CREATE-PDF"
+      class="p-button-raised p-button-success"
+    ></button>
+  </span>
+  <span>
+    <button
+      pButton
+      pRipple
+      type="button"
+      label="CLEAR FORM"
+      class="p-button-raised p-button-warning"
+    ></button>
+  </span>
+</div>

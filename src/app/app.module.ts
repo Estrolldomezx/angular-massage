@@ -1,9 +1,12 @@
-import { NgModule }      from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CalendarModule } from 'primeng/calendar';
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
 
-import { AppComponent }   from './app.component';
+import { AppComponent } from './app.component';
 
 import { DropdownModule } from 'primeng/dropdown';
 
@@ -12,10 +15,12 @@ import { DropdownModule } from 'primeng/dropdown';
     BrowserModule,
     BrowserAnimationsModule,
     DropdownModule,
-    FormsModule
+    FormsModule,
+    CalendarModule,
+    InputTextModule,
+    ButtonModule,
   ],
-  declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [AppComponent],
+  bootstrap: [AppComponent],
 })
-
-export class AppModule { }
+export class AppModule {}
